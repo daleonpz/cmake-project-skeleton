@@ -1,5 +1,6 @@
 # Generated Files
 **/buildresults/**
+**/build/**
 
 # Sublime-generated Files
 *.sublime-workspace
