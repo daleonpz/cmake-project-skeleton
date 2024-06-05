@@ -4,8 +4,10 @@ project(MYPROJECT
 	DESCRIPTION "MYDESCRIPTION"
 	LANGUAGES C CXX ASM)
 
+message(STATUS "TOOLCHAIN_FILE: ${CMAKE_TOOLCHAIN_FILE}")
 set_property(GLOBAL PROPERTY C_STANDARD 11)
 set_property(GLOBAL PROPERTY CXX_STANDARD 17)
+
 
 #################
 # Build Modules #
@@ -41,6 +43,12 @@ endif()
 # Enable Catch2 Support if testing is enabled
 if(PROJECTVARNAME_TESTING_IS_ENABLED)
   include(cmake/test/catch2.cmake)
+endif()
+
+# Enable GoogleTest Support if testing is enabled
+if(PROJECTVARNAME_TESTING_IS_ENABLED)
+  enable_testing()
+  include(cmake/test/googletest.cmake)
 endif()
 
 # Specifies default compiler flags for the project
