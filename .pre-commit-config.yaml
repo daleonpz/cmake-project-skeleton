@@ -47,15 +47,17 @@ repos:
         - id: cppcheck
           name: cppcheck
           entry: cppcheck
-          language: python
+          language: system
+#           language: python
           types_or: [c, c++]
-#           files: \.(c|cpp|h|hpp)$
+          files: \.(c|cpp|h|hpp)$
           args: [--enable=all]
           description: "Cppcheck is a static analysis tool for C/C++ code."
         - id: clang-format
           name: clang-format
           entry: clang-format
-          language: python
+          language: system
+#           language: python
           types_or: [c, c++]
           files: \.(c|cpp|h|hpp)$
           args: [-i, --style=google]
