@@ -2,7 +2,7 @@
 
 int main(void) {
   const int expected = 42;
-  int val = ret42()
+  int val = ret42();
 
-      return (expected != val);
+  return (expected != val);
 }
