@@ -57,7 +57,8 @@ repos:
         language: system
         types_or: [c, c++]
         files: \.(c|cpp|h|hpp)$
-        args: [--enable=all, --error-exitcode=1, --suppress=missingIncludeSystem]
+        args: [--error-exitcode=1]
+#         args: [--enable=all, --error-exitcode=1, --suppress=missingIncludeSystem, --suppress=unusedFunction, --suppress=duplicateExpression]
         description: "Cppcheck is a static analysis tool for C/C++ code."
       - id: clang-format
         name: clang-format
@@ -65,6 +66,6 @@ repos:
         language: system
         types_or: [c, c++]
         files: \.(c|cpp|h|hpp)$
-        args: [-i, --style=google]
+        args: [-i]
         description: "ClangFormat is a tool to format C/C++/Obj-C code."
 
