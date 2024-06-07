@@ -44,6 +44,14 @@ repos:
           exclude: ^\s*#
           additional_dependencies: [black==23.1.0]
           description: "Black is the uncompromising Python code formatter."
+        - id: cppcheck
+          name: cppcheck
+          entry: cppcheck
+          language: python
+          types_or: [c, c++]
+#           files: \.(c|cpp|h|hpp)$
+          args: [--enable=all]
+          description: "Cppcheck is a static analysis tool for C/C++ code."
         - id: clang-format
           name: clang-format
           entry: clang-format
@@ -52,12 +60,4 @@ repos:
           files: \.(c|cpp|h|hpp)$
           args: [-i, --style=google]
           description: "ClangFormat is a tool to format C/C++/Obj-C code."
-        - id: cppcheck
-          name: cppcheck
-          entry: cppcheck
-          language: python
-          types_or: [c, c++]
-          files: \.(c|cpp|h|hpp)$
-          args: [--enable=all]
-          description: "Cppcheck is a static analysis tool for C/C++ code."
 
