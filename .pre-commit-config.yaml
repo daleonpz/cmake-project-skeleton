@@ -57,6 +57,10 @@ repos:
         language: system
         types_or: [c, c++]
         files: \.(c|cpp|h|hpp)$
+        exclude: |
+          ^third_party/
+          ^build/
+          ^external/
         args: [--error-exitcode=1, --inline-suppr, --inconclusive, --force, --enable=warning,performance,portability,information,missingInclude,
         --suppress=normalCheckLevelMaxBranches]
 #         args: [--error-exitcode=1, --enable=all]
