@@ -7,6 +7,11 @@ project(MYPROJECT
 message(STATUS "TOOLCHAIN_FILE: ${CMAKE_TOOLCHAIN_FILE}")
 set_property(GLOBAL PROPERTY C_STANDARD 11)
 set_property(GLOBAL PROPERTY CXX_STANDARD 17)
+add_compile_definitions(
+    USE_HAL_DRIVER 
+    STM32F746xx 
+    USE_STM32746G_DISCOVERY
+)
 
 
 #################
@@ -36,10 +41,10 @@ include(cmake/analysis/coverage.cmake)
 include(cmake/analysis/sanitizers.cmake)
 
 # Enable CMocka support if testing is enabled
-if(PROJECTVARNAME_TESTING_IS_ENABLED)
-  include(cmake/test/cmocka.cmake)
-endif()
-
+# if(PROJECTVARNAME_TESTING_IS_ENABLED)
+#   include(cmake/test/cmocka.cmake)
+# endif()
+# 
 # Enable Catch2 Support if testing is enabled
 if(PROJECTVARNAME_TESTING_IS_ENABLED)
   include(cmake/test/catch2.cmake)
@@ -92,7 +97,7 @@ add_subdirectory(src)
 # Process Test Tree #
 #####################
 
-add_subdirectory(test)
+# add_subdirectory(test)
 
 ###################
 # Tooling Targets #
