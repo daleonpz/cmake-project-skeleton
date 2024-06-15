@@ -57,9 +57,10 @@ repos:
         language: system
         types_or: [c, c++]
         files: \.(c|cpp|h|hpp)$
+        args: [--error-exitcode=1, --inline-suppr, --inconclusive, --force, --enable=warning,performance,portability,information,missingInclude]
 #         args: [--error-exitcode=1, --enable=all]
-        args: [--error-exitcode=1, --inline-suppr, --inconclusive, --force, --enable=warning,performance,portability,style,information,missingInclude]
-#         args: [--enable=all, --error-exitcode=1, --suppress=missingIncludeSystem, --suppress=unusedFunction, --suppress=duplicateExpression]
+#         args: [--error-exitcode=1, --inline-suppr, --inconclusive, --force, --enable=warning,performance,portability,style,information,missingInclude]
+# #         args: [--enable=all, --error-exitcode=1, --suppress=missingIncludeSystem, --suppress=unusedFunction, --suppress=duplicateExpression]
         description: "Cppcheck is a static analysis tool for C/C++ code."
       - id: clang-format
         name: clang-format
