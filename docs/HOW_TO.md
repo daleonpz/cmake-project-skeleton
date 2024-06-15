@@ -1,3 +1,70 @@
+A collection of guides on how to perform various tasks using CMake and Ninja.
+
+Table of Contents:
+- [How to Build a Project Using CMake and Ninja](#how-to-build-a-project-using-cmake-and-ninja)
+- [How to Run Tests Using CMake and Ninja](#how-to-run-tests-using-cmake-and-ninja)
+- [How to Run Coverage Analysis, Static Code Analysis, and Code Formatting on Your Project Using CMake and Ninja](#how-to-run-coverage-analysis-static-code-analysis-and-code-formatting-on-your-project-using-cmake-and-ninja)
+- [How to Flash a Binary to an STM32 Microcontroller Using STM32CubeProgrammer](#how-to-flash-a-binary-to-an-stm32-microcontroller-using-stm32cubeprogrammer)
+
+# How to Build a Project Using CMake and Ninja
+This guide explains how to build a project using CMake and Ninja.
+
+## Step 1: Configure the Project
+
+First, configure the project using CMake:
+
+```sh
+mkdir build
+cd build
+cmake .. -DCMAKE_BUILD_TYPE=Debug -G Ninja
+```
+
+You can also specify additional options when configuring the project. For example, to enable coverage analysis:
+
+```sh
+cmake .. -DCMAKE_BUILD_TYPE=Debug -DENABLE_COVERAGE_ANALYSIS=ON -G Ninja
+```
+
+Or disable Position Independent Code (PIC):
+
+```sh
+cmake .. -DCMAKE_BUILD_TYPE=Debug -DCMAKE_POSITION_INDEPENDENT_CODE=OFF -G Ninja
+```
+
+## Step 2: Build the Project
+Next, build the project using Ninja:
+
+```sh
+ninja
+```
+
+# How to Run Tests Using CMake and Ninja
+This guide explains how to run tests using CMake and Ninja.
+
+## Step 1: Configure the Project
+
+First, configure the project with tests enabled:
+
+```sh
+cmake .. -DCMAKE_BUILD_TYPE=Debug -DENABLE_TESTS=ON -DBUILD_WITH_CPPCHECK_ANALYSIS=ON -G Ninja
+```
+
+## Step 2: Build the Project
+
+Next, build the project using Ninja:
+
+```sh
+ninja
+```
+
+## Step 3: Run the Tests
+
+Run all the tests:
+
+```sh
+ninja test
+```
+
 # How to Run Coverage Analysis, Static Code Analysis, and Code Formatting on Your Project Using CMake and Ninja
 
 This guide explains how to run coverage analysis, static code analysis, and code formatting on your project using CMake and Ninja.
@@ -113,3 +180,34 @@ ninja clang-format
 ```
 
 This completes the process of running coverage analysis, static code analysis, and code formatting on your project.
+
+
+# How to Flash a Binary to an STM32 Microcontroller Using STM32CubeProgrammer
+
+This guide explains how to flash a binary to an STM32 microcontroller using STM32CubeProgrammer.
+
+## Step 1: Build the Project
+
+Build the project using Ninja and CMake:
+
+```sh
+mkdir build
+cd build
+cmake .. \
+    -DCMAKE_BUILD_TYPE=Debug  \
+    -DCMAKE_TOOLCHAIN_FILE=cmake/toolchains/cross/STM32746G_Discovery.cmake \
+    -DCMAKE_POSITION_INDEPENDENT_CODE=OFF -G Ninja
+ninja all
+```
+
+## Step 2: Flash the Binary
+
+When the build is successful, you can flash the binary to the STM32 microcontroller using STM32CubeProgrammer:
+
+```sh
+<PATH_TO_YOUR_STM32_TOOLS>/STM32CubeProgrammer/bin/STM32_Programmer_CLI -c port=swd freq=4000 -w src/Core/Core.bin 0x08000000 -rst
+```
+
+In this example, the binary file is `src/Core/Core.bin`, and the memory address is `0x08000000`.
+
+This completes the process of flashing a binary to an STM32 microcontroller using STM32CubeProgrammer.
