@@ -56,11 +56,23 @@ repos:
         entry: cppcheck
         language: system
         types_or: [c, c++]
-        files: \.(c|cpp|h|hpp)$
-        exclude: |
-          (^|/)(third_party|Third_party|external|External)(/|$)
-        args: [--error-exitcode=1, --inline-suppr, --inconclusive, --force, --enable=warning,performance,portability,information,missingInclude,
-        --suppress=normalCheckLevelMaxBranches]
+        files: ^((?!third_party|Third_party|external|External).)*\.(c|cpp|h|hpp)$
+#         files: \.(c|cpp|h|hpp)$
+#         exclude: |
+#           (^|/)(
+#             third_party|
+#             Third_party|
+#             external|
+#             External
+#           )(/|$)
+        args: [
+          --error-exitcode=1,
+          --inline-suppr,
+          --inconclusive,
+          --force,
+          --enable=warning,performance,portability,information,missingInclude,
+          --suppress=normalCheckLevelMaxBranches
+          ]
 #         args: [--error-exitcode=1, --enable=all]
 #         args: [--error-exitcode=1, --inline-suppr, --inconclusive, --force, --enable=warning,performance,portability,style,information,missingInclude]
 # #         args: [--enable=all, --error-exitcode=1, --suppress=missingIncludeSystem, --suppress=unusedFunction, --suppress=duplicateExpression]
