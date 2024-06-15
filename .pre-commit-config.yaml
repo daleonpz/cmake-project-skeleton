@@ -82,7 +82,8 @@ repos:
         entry: clang-format
         language: system
         types_or: [c, c++]
-        files: \.(c|cpp|h|hpp)$
+        files: ^((?!third_party|Third_party|external|External).)*\.(c|cpp|h|hpp)$
+# files: \.(c|cpp|h|hpp)$
         args: [-i]
         description: "ClangFormat is a tool to format C/C++/Obj-C code."
 
