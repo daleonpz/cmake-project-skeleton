@@ -228,6 +228,7 @@ If you are interested in contributing to this project, please read our [contribu
 ## Authors
 
 * **[Phillip Johnston](https://github.com/phillipjohnston)**
+* **[Daniel Paredes](https://baremetallics.com)**
 
 ## License
 
