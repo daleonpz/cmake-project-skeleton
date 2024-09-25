@@ -194,6 +194,7 @@ Build the project using Ninja and CMake:
 mkdir build
 cd build
 cmake .. \
+     # Specify the build type: Debug Release MinSizeRel RelWithDebInfo
     -DCMAKE_BUILD_TYPE=Debug  \
     -DCMAKE_TOOLCHAIN_FILE=cmake/toolchains/cross/STM32746G_Discovery.cmake \
     -DCMAKE_POSITION_INDEPENDENT_CODE=OFF -G Ninja
