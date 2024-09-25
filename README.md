@@ -1,5 +1,14 @@
 # Project Title
 
+## Fork Information
+
+This repository is a fork of [Original Repository](https://github.com/embeddedartistry/cmake-project-skeleton).
+
+### Maintainer
+
+I am the maintainer of this fork, and I am committed to keeping it updated and improving upon the original work.
+
+---
 Provide an introductory paragraph, describing:
 
 * What your project does
@@ -228,7 +237,6 @@ If you are interested in contributing to this project, please read our [contribu
 ## Authors
 
 * **[Phillip Johnston](https://github.com/phillipjohnston)**
-* **[Daniel Paredes](https://baremetallics.com)**
 
 ## License
 
