@@ -5,6 +5,15 @@
 # Sublime-generated Files
 *.sublime-workspace
 
+#######################
+# Python Ignore Rules #
+#######################
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+.python-version
+
 ########################
 # C / C++ Ignore Rules #
 ########################
