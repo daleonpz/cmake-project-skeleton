@@ -8,22 +8,19 @@ Provide an introductory paragraph, describing:
 
 ## Table of Contents
 
-1. [About the Project](#about-the-project)
-2. [Project Status](#project-status)
-3. [Getting Started](#getting-started)
-    1. [Requirements](#requirements)
-        1. [git-lfs](#git-lfs)
-        1. [CMake Build System](#cmake-build-system)
-    2. [Getting the Source](#getting-the-source)
-    3. [Building](#building)
-    4. [Testing](#testing)
-5. [Documentation](#documentation)
-6. [Need Help?](#need-help)
-7. [Contributing](#contributing)
-8. [Further Reading](#further-reading)
-9. [Authors](#authors)
-10. [License](#license)
-11. [Acknowledgments](#acknowledgements)
+[About the Project](#about-the-project)  
+[Project Status](#project-status)  
+[Getting Started](#getting-started)  
+- [Requirements](#requirements)  
+- [Getting the Source](#getting-the-source)  
+- [Building](#building)  
+- [Testing](#testing)
+  
+[Documentation](#documentation)  
+[Contributing](#contributing)  
+[Authors](#authors)  
+[License](#license)  
+[Acknowledgments](#acknowledgements)  
 
 # About the Project
 
@@ -217,7 +214,7 @@ Documentation can be found in `buildresults/docs`, and the root page is `index.h
 
 ## Contributing
 
-If you are interested in contributing to this project, please read our [contributing guidelines](docs/CONTRIBUTING.md).
+If you are interested in contributing to this project, please create a pull request.
 
 ## Authors
 
