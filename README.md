@@ -125,7 +125,7 @@ This project uses [`git-lfs`](https://git-lfs.github.com), so please install it 
 This project is hosted on GitHub. You can clone the project directly using this command:
 
 ```
-git clone --recursive git@github.com:embeddedartistry/project-skeleton.git
+git clone --recursive git@github.com:daleonpz/cmake-template.git
 ```
 
 If you don't clone recursively, be sure to run the following command in the repository or your build will fail:
@@ -183,8 +183,6 @@ cmake -B buildresults -DCMAKE_TOOLCHAIN_FILE=cmake/toolchains/cross/cortex-m3.cm
 Following that, you can run `make` (at the project root) or `ninja` to build the project.
 
 Tests will not be cross-compiled. They will only be built for the native platform.
-
-**Full instructions for building the project, using alternate toolchains, and running supporting tooling are documented in [Embedded Artistry's Standardized CMake Build System](https://embeddedartistry.com/fieldatlas/embedded-artistrys-standardized-cmake-build-system/) on our website.**
 
 **[Back to top](#table-of-contents)**
 
