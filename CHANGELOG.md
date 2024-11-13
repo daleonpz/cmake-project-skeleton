@@ -4,7 +4,3 @@
 
 - **commitizen**: add commitizen config files to the repo
 - **.pre-commit-config.yaml**: add commitizen to repo
-
-### Fix
-
-- added a semicolon at the end of the line where int a = 8; is declared
