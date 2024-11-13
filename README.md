@@ -1,4 +1,4 @@
-# Project Title
+# CMake Template (Replace it with Project Title)
 
 ## Fork Information
 
