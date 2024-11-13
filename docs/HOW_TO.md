@@ -65,6 +65,8 @@ Run all the tests:
 ninja test
 ```
 
+=======
+>>>>>>> origin/main
 # How to Run Coverage Analysis, Static Code Analysis, and Code Formatting on Your Project Using CMake and Ninja
 
 This guide explains how to run coverage analysis, static code analysis, and code formatting on your project using CMake and Ninja.
@@ -180,6 +182,7 @@ ninja clang-format
 ```
 
 This completes the process of running coverage analysis, static code analysis, and code formatting on your project.
+<<<<<<< HEAD
 
 
 # How to Flash a Binary to an STM32 Microcontroller Using STM32CubeProgrammer
