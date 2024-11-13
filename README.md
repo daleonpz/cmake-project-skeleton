@@ -215,29 +215,25 @@ Documentation can be found in `buildresults/docs`, and the root page is `index.h
 
 **[Back to top](#table-of-contents)**
 
-## Need help?
-
-If you need further assistance or have any questions, please file a GitHub issue or send us an email using the [Embedded Artistry Contact Form](http://embeddedartistry.com/contact).
-
-You can also [reach out on Twitter: mbeddedartistry](https://twitter.com/mbeddedartistry/).
-
 ## Contributing
 
 If you are interested in contributing to this project, please read our [contributing guidelines](docs/CONTRIBUTING.md).
 
 ## Authors
 
-* **[Phillip Johnston](https://github.com/phillipjohnston)**
+* Original authors: **[Phillip Johnston](https://github.com/phillipjohnston)**
+* Maintained and extended by **[Daniel Paredes (daleonpz)](https://github.com/daleonpz)**
 
 ## License
 
-Copyright © 2020 Embedded Artistry LLC
+This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for full details.
 
-See the [LICENSE](LICENSE) file for licensing details.
+Copyright © 2020 Embedded Artistry LLC.  
+Modified and maintained by **[Daniel Paredes (daleonpz)](https://github.com/daleonpz)**.
 
 ## Acknowledgments
 
-Make any public acknowledgments here
-
+* Thanks to the original authors: Phillip Johnston and Embedded Artistry LLC.
+  
 **[Back to top](#table-of-contents)**
 
