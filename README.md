@@ -46,7 +46,7 @@ Describe the current release and any notes about the current state of the projec
 
 ### Requirements
 
-This project uses [Embedded Artistry's standard CMake build system](https://embeddedartistry.com/fieldatlas/embedded-artistrys-standardized-cmake-build-system/), and dependencies are described in detail [on our website](https://embeddedartistry.com/fieldatlas/embedded-artistrys-standardized-cmake-build-system/).
+This project uses a fork of [Embedded Artistry's standard CMake build system](https://embeddedartistry.com/fieldatlas/embedded-artistrys-standardized-cmake-build-system/) which is included here as the submodule `cmake`.
 
 At a minimum you will need:
 
